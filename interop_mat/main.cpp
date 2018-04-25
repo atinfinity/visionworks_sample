@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 	cv::Mat src = cv::imread("lena.jpg", cv::IMREAD_GRAYSCALE);
 	if(src.empty())
 	{
-		std::cout << "Error: Could not load image file." << std::endl;
+		std::cerr << "Error: Could not load image file." << std::endl;
 		return -1;
 	}
 	cv::Mat dst(src.size(), src.type(), cv::Scalar(0));
