@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 	// launch OpenVX API
 	VX_SAFE_CALL(vxuBox3x3(context, v_src, v_dst));
 
-	// convert from Mat to vx_image
+	// convert from vx_image to Mat
 	nvx_cv::VXImageToCVMatMapper mapper(v_dst, 0, NULL, VX_READ_AND_WRITE, VX_MEMORY_TYPE_HOST);
 	cv::Mat result = mapper.getMat();
 
